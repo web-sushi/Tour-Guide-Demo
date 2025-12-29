@@ -12,20 +12,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
     <!-- Navigation -->
     <header class="header">
-      <div class="container nav">
-        <h1 class="logo">Tokyo Private Tours</h1>
-        <nav>
+      <div class="container nav-container">
+        <a href="#home" class="logo">Tokyo Private Tours</a>
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-menu">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#tours">Tours</a>
+          <a href="#gallery">Gallery</a>
           <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
           <button class="btn btn-primary open-modal">Book a Tour</button>
         </nav>
       </div>
@@ -37,10 +55,13 @@
         <div class="hero-content">
           <h2>Discover Tokyo <br />With a Local Guide</h2>
           <p id="hero-subheading">
-            Private, flexible, and unforgettable walking tours tailored just for
-            you.
+            Experience the real Tokyo beyond the tourist trails. Join me for
+            private, personalized walking tours that reveal hidden temples,
+            secret izakayas, and authentic cultural experiences you won't find
+            in guidebooks. Whether you're a first-time visitor or returning to
+            explore deeper, let's create unforgettable memories together.
           </p>
-          <a href="#contact" class="btn btn-primary open-modal" id="book-a-tour"
+          <a href="#tours" class="btn btn-primary open-modal" id="book-a-tour"
             >Book a Tour</a
           >
         </div>
@@ -54,13 +75,31 @@
         <div>
           <h2>About Your Guide</h2>
           <p>
-            Hi! I’m Ken, a licensed private tour guide based in Tokyo. I’ve been
-            guiding travelers for over 5 years, sharing hidden spots, local
-            food, and cultural stories you won’t find in guidebooks.
+            Konnichiwa! I'm Ken, a licensed private tour guide and Tokyo native
+            with over 8 years of experience sharing my city with travelers from
+            around the world. Born and raised in Tokyo, I've watched this
+            incredible city evolve while maintaining its deep cultural roots.
           </p>
           <p>
-            Whether it’s your first visit or your fifth, I’ll help you
-            experience Tokyo like a local.
+            My passion is connecting visitors with the authentic Tokyo, the
+            hidden temples tucked away in residential neighborhoods, the
+            family-run restaurants serving recipes passed down for generations,
+            and the local stories that bring each district to life. I speak
+            fluent English and Japanese, and I'm certified by the Japan National
+            Tourism Organization.
+          </p>
+          <p>
+            What sets my tours apart? Flexibility. Every tour is customized to
+            your interests, pace, and curiosity. Whether you're a foodie wanting
+            to explore the best ramen shops, a history buff fascinated by
+            samurai culture, or someone simply wanting to experience daily life
+            in Tokyo, I'll craft an itinerary that feels personal and
+            meaningful.
+          </p>
+          <p>
+            I believe the best travel experiences happen when you step off the
+            beaten path. Let me show you the Tokyo I know and love, the one that
+            exists beyond the guidebooks and Instagram posts.
           </p>
         </div>
       </div>
@@ -75,7 +114,14 @@
           <div class="card">
             <img src="images/historical.jpg" alt="Asakusa Tour" />
             <h3>Asakusa & Senso-ji</h3>
-            <p>Traditional streets, temples, and local snacks.</p>
+            <p>
+              Step back in time to old Tokyo. Explore the historic Asakusa
+              district, home to Tokyo's oldest temple, Senso-ji. Walk through
+              Nakamise Shopping Street, discover hidden shrines, and learn about
+              traditional crafts. Sample authentic street food like melon pan
+              and ningyo-yaki while hearing stories of Edo-period Tokyo. Perfect
+              for first-time visitors seeking traditional culture.
+            </p>
             <p class="price">From ¥8,000 / 3 hrs</p>
             <button
               class="btn btn-primary open-modal"
@@ -88,7 +134,15 @@
           <div class="card">
             <img src="images/secret.jpg" alt="Shibuya Tour" />
             <h3>Shibuya & Harajuku</h3>
-            <p>Modern culture, fashion, and famous crossings.</p>
+            <p>
+              Experience the pulse of modern Tokyo. Navigate the world's busiest
+              intersection at Shibuya Crossing, explore the quirky fashion scene
+              in Harajuku's Takeshita Street, and discover hidden cafes and
+              boutiques. Learn about youth culture, street fashion, and the
+              evolution of these iconic neighborhoods. Includes visits to Meiji
+              Shrine and local recommendations for the best ramen and kawaii
+              culture spots.
+            </p>
             <p class="price">From ¥9,000 / 3 hrs</p>
             <button
               class="btn btn-primary open-modal"
@@ -101,7 +155,14 @@
           <div class="card">
             <img src="images/food.jpg" alt="Custom Tour" />
             <h3>Custom Private Tour</h3>
-            <p>Create your own itinerary based on your interests.</p>
+            <p>
+              Design your perfect Tokyo experience. Whether you want to dive
+              deep into food culture with izakaya hopping, explore anime and
+              manga districts, discover traditional crafts, or visit specific
+              neighborhoods, I'll create a personalized itinerary just for you.
+              Perfect for repeat visitors or those with specific interests.
+              Duration and route tailored to your preferences.
+            </p>
             <p class="price">From ¥10,000</p>
             <button
               class="btn btn-primary open-modal"
@@ -110,9 +171,134 @@
               Book Now
             </button>
           </div>
+        </div>
+        <div class="tour-info">
           <p>📍 Meeting point provided after booking</p>
-          <br />
           <p>⏱ Typical tour length: 3–4 hours</p>
+          <p>👥 Small groups (1-6 people) for personalized experience</p>
+          <p>🗣️ Tours conducted in English and Japanese</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section light">
+      <div class="container">
+        <h2 class="center">Photo Gallery</h2>
+        <p class="center gallery-intro">
+          Experience the beauty and vibrancy of Tokyo through our photo
+          collection. From ancient temples to modern cityscapes, from
+          traditional markets to bustling neighborhoods, these images capture
+          the essence of what awaits you on our tours.
+        </p>
+
+        <div class="gallery-carousel">
+          <button
+            class="carousel-btn carousel-prev"
+            aria-label="Previous image"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn carousel-next" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <div class="carousel-slide active">
+                <img
+                  src="images/gallery-01.jpg"
+                  alt="Tokyo streets and traditional architecture"
+                />
+                <div class="carousel-caption">
+                  <p>
+                    Traditional meets modern in the heart of Tokyo's historic
+                    districts
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <img
+                  src="images/gallery-02.jpg"
+                  alt="Tokyo cityscape and skyline"
+                />
+                <div class="carousel-caption">
+                  <p>
+                    The breathtaking skyline of Tokyo from one of the city's
+                    best viewpoints
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <img
+                  src="images/gallery-03.jpg"
+                  alt="Tokyo temple and cultural site"
+                />
+                <div class="carousel-caption">
+                  <p>
+                    Ancient temples and shrines offer peaceful moments in the
+                    bustling metropolis
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <img
+                  src="images/gallery-04.jpg"
+                  alt="Tokyo street scenes and local culture"
+                />
+                <div class="carousel-caption">
+                  <p>
+                    Vibrant street scenes showcasing Tokyo's unique culture and
+                    daily life
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-slide">
+                <img
+                  src="images/gallery-05.jpg"
+                  alt="Tokyo neighborhood and local experience"
+                />
+                <div class="carousel-caption">
+                  <p>
+                    Discover hidden neighborhoods and authentic local
+                    experiences
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-indicators">
+            <button
+              class="indicator active"
+              aria-label="Go to slide 1"
+              data-slide="0"
+            ></button>
+            <button
+              class="indicator"
+              aria-label="Go to slide 2"
+              data-slide="1"
+            ></button>
+            <button
+              class="indicator"
+              aria-label="Go to slide 3"
+              data-slide="2"
+            ></button>
+            <button
+              class="indicator"
+              aria-label="Go to slide 4"
+              data-slide="3"
+            ></button>
+            <button
+              class="indicator"
+              aria-label="Go to slide 5"
+              data-slide="4"
+            ></button>
+          </div>
         </div>
       </div>
     </section>
@@ -120,23 +306,160 @@
     <!-- Reviews -->
     <section id="reviews" class="section">
       <div class="container">
-        <h2 class="center">Traveler Reviews</h2>
+        <h2 class="center">What Travelers Say</h2>
+        <p
+          class="center"
+          style="
+            max-width: 700px;
+            margin: 0 auto 48px;
+            color: var(--text-muted);
+          "
+        >
+          Don't just take our word for it. Here's what travelers from around the
+          world have to say about their Tokyo experiences with us.
+        </p>
 
         <div class="testimonials">
           <blockquote>
-            “Best tour we had in Japan! Friendly, knowledgeable, and flexible.”
-            <span>— Sarah, USA</span>
+            "Ken was absolutely incredible! This was our third trip to Tokyo,
+            and he showed us places we never knew existed. His knowledge of
+            local history and food culture is impressive, and he's genuinely
+            passionate about sharing his city. The Asakusa tour was the
+            highlight of our trip. Highly recommend!"
+            <span>— Sarah & James, USA</span>
           </blockquote>
           <blockquote>
-            “We saw places we never would’ve found on our own.”
-            <span>— Marco, Italy</span>
+            "We had only one day in Tokyo and wanted to make the most of it. Ken
+            created a custom tour that perfectly matched our interests in food
+            and modern culture. He took us to the best ramen shop we've ever
+            tried and showed us hidden spots in Shibuya we never would've found
+            on our own. Worth every yen!"
+            <span>— Marco & Elena, Italy</span>
+          </blockquote>
+          <blockquote>
+            "As a solo female traveler, I felt completely safe and comfortable
+            with Ken. He's professional, speaks excellent English, and really
+            listens to what you want to see. The tour felt more like exploring
+            with a friend than a formal guide. I learned so much about Japanese
+            culture and traditions. Can't wait to book another tour on my next
+            visit!"
+            <span>— Rachel, Australia</span>
+          </blockquote>
+          <blockquote>
+            "Our family of five (including two teenagers) had an amazing time!
+            Ken kept everyone engaged with interesting stories and made sure we
+            had plenty of food stops. The kids loved learning about samurai
+            history and trying new foods. He was patient, flexible, and adjusted
+            the pace perfectly. Best tour guide we've had anywhere!"
+            <span>— The Chen Family, Singapore</span>
           </blockquote>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq" class="section light">
+      <div class="container">
+        <h2 class="center">Frequently Asked Questions</h2>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <h3>How do I book a tour?</h3>
+            <p>
+              Simply click the "Book a Tour" button anywhere on the site, fill
+              out the inquiry form with your preferred date, group size, and
+              interests, and I'll get back to you within 24 hours to confirm
+              details and answer any questions.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What's included in the tour price?</h3>
+            <p>
+              The tour price includes my services as your guide, route planning,
+              cultural insights, and local recommendations. Food, drinks,
+              entrance fees, and transportation costs are not included unless
+              specified. I'll always let you know about any additional costs
+              beforehand.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can you accommodate dietary restrictions?</h3>
+            <p>
+              Absolutely! Whether you're vegetarian, vegan, have food allergies,
+              or follow halal/kosher diets, I can adjust the tour to include
+              suitable dining options. Just mention your dietary needs when
+              booking.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What if it rains?</h3>
+            <p>
+              Tours operate rain or shine! Tokyo has covered areas and indoor
+              attractions we can visit. If the weather is severe, we can
+              reschedule or adjust the itinerary. I'll keep you informed and
+              flexible.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Do you offer tours in languages other than English?</h3>
+            <p>
+              Yes! I'm fluent in English and Japanese. For other languages, I
+              can arrange a translator or provide written materials in advance.
+              Please let me know your language preference when booking.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What should I bring on the tour?</h3>
+            <p>
+              Comfortable walking shoes are essential! Also bring a water
+              bottle, camera, cash (many small shops don't accept cards), and an
+              umbrella during rainy season. I'll send a detailed list after
+              booking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
-      <p>© 2025 Tokyo Private Tours</p>
+      <div class="footer-content">
+        <p>© 2025 Tokyo Private Tours</p>
+        <div class="social-icons">
+          <a
+            href="mailto:info@tokyoprivattours.com"
+            aria-label="Email"
+            class="social-icon"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+81312345678" aria-label="Phone" class="social-icon">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            class="social-icon"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            class="social-icon"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
     </footer>
 
     <!-- Modal -->
@@ -144,7 +467,7 @@
       <div class="modal-content" role="dialog" aria-modal="true">
         <!-- Header -->
         <div class="modal-header">
-          <h2>Book Your Tour</h2>
+          <h2 id="modalTitle">Book Your Tour</h2>
           <button class="close-modal" aria-label="Close booking form">
             &times;
           </button>
@@ -160,7 +483,6 @@
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             class="contact-form"
-            netlify
           >
             <!-- REQUIRED for Netlify -->
             <input type="hidden" name="form-name" value="tour-booking" />
@@ -261,6 +583,11 @@
         </div>
       </div>
     </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
   </body>
